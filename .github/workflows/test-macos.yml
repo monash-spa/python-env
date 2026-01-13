@@ -1,0 +1,81 @@
+name: Test macOS Setup Instructions
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  test-macos-instructions:
+    name: Verify macOS README Instructions
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Step 2 - Install uv (from README)
+        run: |
+          echo "Following macOS README Step 2..."
+          curl -LsSf https://astral.sh/uv/install.sh | sh
+
+      - name: Simulate reopening terminal
+        run: |
+          echo "Simulating terminal restart by sourcing environment..."
+          source $HOME/.cargo/env
+
+      - name: Step 3 - Verify uv is installed (from README)
+        run: |
+          echo "Following macOS README Step 3..."
+          export PATH="$HOME/.cargo/bin:$PATH"
+          uv --version
+
+      - name: Step 4 - Navigate to project folder (already in folder)
+        run: |
+          echo "Following macOS README Step 4..."
+          echo "Current directory: $(pwd)"
+          ls -la
+
+      - name: Step 5 - Create and activate environment (from README)
+        run: |
+          echo "Following macOS README Step 5..."
+          export PATH="$HOME/.cargo/bin:$PATH"
+          uv sync
+
+      - name: Step 6 - Test running Python (from README)
+        run: |
+          echo "Following macOS README Step 6..."
+          export PATH="$HOME/.cargo/bin:$PATH"
+          uv run python --version
+
+      - name: Verify Installation - Test imports (from README)
+        run: |
+          echo "Following README 'Verifying Your Installation' section..."
+          export PATH="$HOME/.cargo/bin:$PATH"
+          uv run python -c "
+          import numpy
+          import astropy
+          import pandas
+          print('Success! All packages imported correctly.')
+          "
+
+      - name: Verify Installation - Test Jupyter (from README)
+        run: |
+          echo "Testing Jupyter as per README..."
+          export PATH="$HOME/.cargo/bin:$PATH"
+          uv run jupyter --version
+
+      - name: Test running a Python script example
+        run: |
+          echo "Testing 'Running Python scripts' section from README..."
+          export PATH="$HOME/.cargo/bin:$PATH"
+          echo 'import numpy as np; print(f"NumPy test: {np.array([1,2,3])}")' > test_script.py
+          uv run python test_script.py
+          rm test_script.py
+
+      - name: Report success
+        run: |
+          echo "✓ All macOS README instructions verified successfully!"
+          echo "✓ Students following the macOS instructions should have a working environment"
