@@ -1,4 +1,4 @@
-# Monash School of Physics and Astronomy - Python Environment
+# Monash SPA Python Environment
 
 Welcome! This guide will help you set up the Python environment you'll need for your Honours coursework. Don't worry if you're new to programming or using the command line – we'll walk through everything step by step.
 
@@ -57,24 +57,41 @@ uv --version
 
 You should see a version number (like `0.5.0` or similar). If you see an error, try closing and reopening Terminal again.
 
-#### Step 4: Navigate to your project folder
+#### Step 4: Download this repository
 
-You need to be in the folder where this README file is located. If you've already downloaded or cloned this project, navigate to it:
+You need to download this project to your computer. There are two ways to do this:
 
-```bash
-cd path/to/monash-spa-env
-```
-
-**Tip:** You can drag and drop the folder from Finder into Terminal after typing `cd ` (with a space) to automatically fill in the path.
-
-If you haven't downloaded the project yet, create a folder for it:
+**Option A: Using git (if you've used it before)**
 
 ```bash
-mkdir -p ~/honours-project
-cd ~/honours-project
+cd ~
+git clone https://github.com/monash-spa/python-env.git honours-env
+cd honours-env
 ```
 
-Then download or clone the project files into this folder.
+**Option B: Download as ZIP (if you haven't used git)**
+
+1. Go to the repository page: https://github.com/monash-spa/python-env
+2. Click the green "Code" button
+3. Click "Download ZIP"
+4. Once downloaded, double-click the ZIP file to extract it
+5. Rename the extracted folder to `honours-env`
+6. Move the `honours-env` folder to your home folder (the folder with your username)
+7. In Terminal, navigate to it:
+
+```bash
+cd ~/honours-env
+```
+
+**Tip:** You can drag and drop the `honours-env` folder from Finder into Terminal after typing `cd ` (with a space) to automatically fill in the path.
+
+Verify you're in the right place by running:
+
+```bash
+ls
+```
+
+You should see files including `pyproject.toml` and `README.md`.
 
 #### Step 5: Create and activate the Python environment
 
@@ -138,22 +155,39 @@ uv --version
 
 You should see a version number. If you get a "command not found" error, make sure you reopened your terminal or ran the source command above.
 
-#### Step 4: Navigate to your project folder
+#### Step 4: Download this repository
 
-Change to the directory where this README file is located:
+You need to download this project to your computer. There are two ways to do this:
 
-```bash
-cd path/to/monash-spa-env
-```
-
-If you haven't downloaded the project yet, create a folder for it:
+**Option A: Using git (if you've used it before)**
 
 ```bash
-mkdir -p ~/honours-project
-cd ~/honours-project
+cd ~
+git clone https://github.com/monash-spa/python-env.git honours-env
+cd honours-env
 ```
 
-Then download or clone the project files into this folder.
+**Option B: Download as ZIP (if you haven't used git)**
+
+1. Go to the repository page: https://github.com/monash-spa/python-env
+2. Click the green "Code" button
+3. Click "Download ZIP"
+4. Once downloaded, extract the ZIP file (usually you can right-click it and select "Extract Here")
+5. Rename the extracted folder to `honours-env`
+6. Move the `honours-env` folder to your home folder
+7. In Terminal, navigate to it:
+
+```bash
+cd ~/honours-env
+```
+
+Verify you're in the right place by running:
+
+```bash
+ls
+```
+
+You should see files including `pyproject.toml` and `README.md`.
 
 #### Step 5: Create and activate the Python environment
 
@@ -236,24 +270,41 @@ Run PowerShell as Administrator (right-click PowerShell and select "Run as admin
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
 
-#### Step 4: Navigate to your project folder
+#### Step 4: Download this repository
 
-Change to the directory where this README file is located. For example:
+You need to download this project to your computer. There are two ways to do this:
 
-```powershell
-cd C:\Users\YourUsername\Documents\monash-spa-env
-```
-
-**Tip:** In PowerShell, you can usually drag and drop a folder into the window to paste its path.
-
-If you haven't downloaded the project yet:
+**Option A: Using git (if you've used it before)**
 
 ```powershell
-mkdir $HOME\honours-project
-cd $HOME\honours-project
+cd ~
+git clone https://github.com/monash-spa/python-env.git honours-env
+cd honours-env
 ```
 
-Then download or clone the project files into this folder.
+**Option B: Download as ZIP (if you haven't used git)**
+
+1. Go to the repository page: https://github.com/monash-spa/python-env
+2. Click the green "Code" button
+3. Click "Download ZIP"
+4. Once downloaded, right-click the ZIP file and select "Extract All..."
+5. Extract it to your user folder (usually `C:\Users\YourUsername\`)
+6. Rename the extracted folder to `honours-env`
+7. In PowerShell, navigate to it:
+
+```powershell
+cd ~\honours-env
+```
+
+**Tip:** You can drag and drop the `honours-env` folder into PowerShell after typing `cd ` (with a space) to automatically fill in the path.
+
+Verify you're in the right place by running:
+
+```powershell
+Get-ChildItem
+```
+
+You should see files including `pyproject.toml` and `README.md`.
 
 #### Step 5: Create and activate the Python environment
 
@@ -323,9 +374,9 @@ To stop Jupyter, go back to your terminal/PowerShell and press `Ctrl+C`, then ty
 ### Every time you want to work on your project:
 
 1. Open your terminal/PowerShell
-2. Navigate to the project folder:
+2. Navigate to the honours-env folder:
    ```bash
-   cd path/to/monash-spa-env
+   cd ~/honours-env
    ```
 3. Run Python or Jupyter with:
    ```bash

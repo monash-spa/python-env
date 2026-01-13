@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Step 4 - Download repository (using GitHub Actions checkout)
         uses: actions/checkout@v4
 
       - name: Step 2 - Install uv (from README)
@@ -32,11 +32,12 @@ jobs:
           export PATH="$HOME/.cargo/bin:$PATH"
           uv --version
 
-      - name: Step 4 - Navigate to project folder (already in folder)
+      - name: Verify we're in the right directory (Step 4 verification)
         run: |
-          echo "Following Linux README Step 4..."
+          echo "Verifying repository download as per README Step 4..."
           echo "Current directory: $(pwd)"
           ls -la
+          test -f pyproject.toml && test -f README.md && echo "✓ Required files found"
 
       - name: Install build dependencies (from README note)
         run: |
