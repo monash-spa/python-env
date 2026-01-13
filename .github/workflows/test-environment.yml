@@ -58,7 +58,7 @@ jobs:
           import sys
           packages = [
               'numpy', 'scipy', 'pandas', 'astropy', 'astropy_healpix',
-              'astroquery', 'photutils', 'ccdproc', 'corrfunc',
+              'astroquery', 'photutils', 'ccdproc', 
               'jupyter', 'pyvo', 'requests', 'astroid'
           ]
           failed = []
