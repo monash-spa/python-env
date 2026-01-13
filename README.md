@@ -387,6 +387,18 @@ To stop Jupyter, go back to your terminal/PowerShell and press `Ctrl+C`, then ty
    uv run jupyter notebook
    ```
 
+You can also 'activate' the environment once and then use it in that same terminal/PowerShell without having to prefix `uv run`:
+
+```bash
+source .venv/bin/activate
+python
+# or
+jupyter
+# or
+ipython
+```
+The `uv` team is trying to discourage the `source activate` workflow because they want `uv` to interpret which Python environment you want to use based on your current working directory, and they want to avoid situations where you are calling `python` from Folder A (thinking you are using the environment in Folder A) when you previously activated an environment in Folder B. But if you are careful about this point of confusion, then you can use `source .venv/bin/activate`.
+
 ### Running Python scripts
 
 If you have a Python script (e.g., `my_analysis.py`), run it with:
