@@ -19,8 +19,9 @@ This environment includes essential tools for astronomy and physics research:
    - [macOS](#macos-setup-instructions)
    - [Linux](#linux-setup-instructions)
    - [Windows](#windows-setup-instructions)
-- [Verifying Your Installation](#verifying-your-installation)
-- [Using the Environment](#using-the-environment)
+- [Verifying your installation](#verifying-your-installation)
+- [Using the environment](#using-the-environment)
+- [Modifying this environment for others](#modifing-this-environment-for-others)
 - [Troubleshooting](#troubleshooting)
 
 ---
@@ -419,6 +420,28 @@ For example:
 ```bash
 uv add matplotlib
 ```
+
+## Modifying this environment for others
+
+---
+
+Let's say you wanted to add or edit a dependency in this environment for future students. This environment includes `matplotlib`, but let's say we wanted to add that dependency. On OSX/Linux, once you have `git` and `uv` installed:
+
+```bash
+# clone the repository
+git clone git@github.com:monash-spa/python-env.git
+cd python-env
+
+# add matplotlib (let uv sort out version dependency)
+uv add matplotlib
+
+# add files changed, commit, and push
+git add pyproject.toml uv.lock
+git commit -m "add matplotlib"
+git push origin main
+```
+
+It would be good practice to do this in a branch and create a pull request, but better done than nerfect.
 
 ---
 
