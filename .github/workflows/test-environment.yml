@@ -53,12 +53,14 @@ jobs:
           uv run python -c "import ccdproc; print('CCDProc imported successfully')"
 
       - name: Test all package imports
+        env:
+          PYTHONIOENCODING: utf-8
         run: |
           uv run python -c "
           import sys
           packages = [
               'numpy', 'scipy', 'pandas', 'astropy', 'astropy_healpix',
-              'astroquery', 'photutils', 'ccdproc', 
+              'astroquery', 'photutils', 'ccdproc',
               'jupyter', 'pyvo', 'requests', 'astroid'
           ]
           failed = []
@@ -81,6 +83,8 @@ jobs:
         run: uv run jupyter --version
 
       - name: Test Python version requirement
+        env:
+          PYTHONIOENCODING: utf-8
         run: |
           uv run python -c "
           import sys

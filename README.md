@@ -4,6 +4,8 @@ Welcome! This guide will help you set up the Python environment you'll need for 
 
 ## What You'll Install
 
+This guide will help you to create a Python environment using `[uv](https://docs.astral.sh/uv/)`, an extremely fast Python package and project manager.
+
 This environment includes essential tools for astronomy and physics research:
 - **Astropy** and related tools for astronomical data analysis
 - **NumPy** and **SciPy** for numerical computing
