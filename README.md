@@ -13,18 +13,21 @@ This environment includes essential tools for astronomy and physics research:
 
 ## Table of Contents
 
-- [macOS Setup Instructions](#macos-setup-instructions)
-- [Linux Setup Instructions](#linux-setup-instructions)
-- [Windows Setup Instructions](#windows-setup-instructions)
+- [Installation](#installation)
+   - [macOS](#macos-setup-instructions)
+   - [Linux](#linux-setup-instructions)
+   - [Windows](#windows-setup-instructions)
 - [Verifying Your Installation](#verifying-your-installation)
 - [Using the Environment](#using-the-environment)
 - [Troubleshooting](#troubleshooting)
 
 ---
 
-## macOS Setup Instructions
+## Installation
 
-### Step 1: Open the Terminal
+### macOS Setup Instructions
+
+#### Step 1: Open the Terminal
 
 The Terminal is an application that lets you type commands to control your computer.
 
@@ -32,7 +35,7 @@ The Terminal is an application that lets you type commands to control your compu
 2. Type "Terminal" and press Enter
 3. A window with white or black background will appear – this is your terminal
 
-### Step 2: Install uv (the Python package manager)
+#### Step 2: Install uv (the Python package manager)
 
 Copy and paste this command into your terminal and press Enter:
 
@@ -44,7 +47,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 After installation completes, close and reopen your Terminal window for the changes to take effect.
 
-### Step 3: Verify uv is installed
+#### Step 3: Verify uv is installed
 
 Type this command and press Enter:
 
@@ -54,7 +57,7 @@ uv --version
 
 You should see a version number (like `0.5.0` or similar). If you see an error, try closing and reopening Terminal again.
 
-### Step 4: Navigate to your project folder
+#### Step 4: Navigate to your project folder
 
 You need to be in the folder where this README file is located. If you've already downloaded or cloned this project, navigate to it:
 
@@ -73,7 +76,7 @@ cd ~/honours-project
 
 Then download or clone the project files into this folder.
 
-### Step 5: Create and activate the Python environment
+#### Step 5: Create and activate the Python environment
 
 Run this command:
 
@@ -83,7 +86,7 @@ uv sync
 
 **What this does:** Creates a virtual Python environment and installs all the required packages listed in `pyproject.toml`. This might take a few minutes the first time.
 
-### Step 6: Start using Python
+#### Step 6: Start using Python
 
 To run Python with all the installed packages:
 
@@ -99,9 +102,9 @@ uv run jupyter notebook
 
 ---
 
-## Linux Setup Instructions
+### Linux Setup Instructions
 
-### Step 1: Open the Terminal
+#### Step 1: Open the Terminal
 
 The method varies by Linux distribution:
 
@@ -109,7 +112,7 @@ The method varies by Linux distribution:
 - **Or** search for "Terminal" in your applications menu
 - A window will appear where you can type commands
 
-### Step 2: Install uv (the Python package manager)
+#### Step 2: Install uv (the Python package manager)
 
 Copy and paste this command into your terminal and press Enter:
 
@@ -125,7 +128,7 @@ After installation completes, either close and reopen your Terminal, or run:
 source $HOME/.cargo/env
 ```
 
-### Step 3: Verify uv is installed
+#### Step 3: Verify uv is installed
 
 Type this command and press Enter:
 
@@ -135,7 +138,7 @@ uv --version
 
 You should see a version number. If you get a "command not found" error, make sure you reopened your terminal or ran the source command above.
 
-### Step 4: Navigate to your project folder
+#### Step 4: Navigate to your project folder
 
 Change to the directory where this README file is located:
 
@@ -152,7 +155,7 @@ cd ~/honours-project
 
 Then download or clone the project files into this folder.
 
-### Step 5: Create and activate the Python environment
+#### Step 5: Create and activate the Python environment
 
 Run this command:
 
@@ -173,7 +176,7 @@ sudo apt-get install -y python3-dev build-essential
 sudo dnf install python3-devel gcc gcc-c++
 ```
 
-### Step 6: Start using Python
+#### Step 6: Start using Python
 
 To run Python with all the installed packages:
 
@@ -189,9 +192,9 @@ uv run jupyter notebook
 
 ---
 
-## Windows Setup Instructions
+### Windows Setup Instructions
 
-### Step 1: Open PowerShell
+#### Step 1: Open PowerShell
 
 PowerShell is Windows' command-line interface (similar to Terminal on Mac/Linux).
 
@@ -204,7 +207,7 @@ PowerShell is Windows' command-line interface (similar to Terminal on Mac/Linux)
 2. Type "PowerShell"
 3. Click "Windows PowerShell"
 
-### Step 2: Install uv (the Python package manager)
+#### Step 2: Install uv (the Python package manager)
 
 Copy and paste this command into PowerShell and press Enter:
 
@@ -216,7 +219,7 @@ powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | ie
 
 **Important:** After installation, close PowerShell completely and open a new PowerShell window.
 
-### Step 3: Verify uv is installed
+#### Step 3: Verify uv is installed
 
 Type this command and press Enter:
 
@@ -233,7 +236,7 @@ Run PowerShell as Administrator (right-click PowerShell and select "Run as admin
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
 
-### Step 4: Navigate to your project folder
+#### Step 4: Navigate to your project folder
 
 Change to the directory where this README file is located. For example:
 
@@ -252,7 +255,7 @@ cd $HOME\honours-project
 
 Then download or clone the project files into this folder.
 
-### Step 5: Create and activate the Python environment
+#### Step 5: Create and activate the Python environment
 
 Run this command:
 
@@ -262,7 +265,7 @@ uv sync
 
 **What this does:** Creates a virtual Python environment and installs all required packages. This will take several minutes the first time.
 
-### Step 6: Start using Python
+#### Step 6: Start using Python
 
 To run Python with all the installed packages:
 
@@ -382,10 +385,10 @@ ls -la
 
 ### Still having problems?
 
-Contact your supervisor or the IT support team with:
+[Create a GitHub issue](github.com/monash-spa/python-env/issues/new) that describes the problem in detail, including:
 1. Your operating system (macOS, Linux, or Windows)
 2. The exact error message you're seeing
-3. The command you were trying to run
+3. The thing you were trying to do
 
 ---
 
@@ -397,4 +400,4 @@ Contact your supervisor or the IT support team with:
 
 ---
 
-Good luck with your honours project! 🔭✨
+Good luck with your honours year! 🔭✨
