@@ -37,7 +37,7 @@ jobs:
           echo "Verifying repository download as per README Step 4..."
           echo "Current directory: $(pwd)"
           ls -la
-          test -f pyproject.toml && test -f README.md && echo "✓ Required files found"
+          test -f pyproject.toml && test -f README.md && echo "[OK] Required files found"
 
       - name: Step 5 - Create and activate environment (from README)
         run: |
@@ -78,5 +78,5 @@ jobs:
 
       - name: Report success
         run: |
-          echo "✓ All macOS README instructions verified successfully!"
-          echo "✓ Students following the macOS instructions should have a working environment"
+          echo "[OK] All macOS README instructions verified successfully!"
+          echo "[OK] Students following the macOS instructions should have a working environment"

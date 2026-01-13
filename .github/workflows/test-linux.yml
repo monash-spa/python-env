@@ -37,7 +37,7 @@ jobs:
           echo "Verifying repository download as per README Step 4..."
           echo "Current directory: $(pwd)"
           ls -la
-          test -f pyproject.toml && test -f README.md && echo "✓ Required files found"
+          test -f pyproject.toml && test -f README.md && echo "[OK] Required files found"
 
       - name: Install build dependencies (from README note)
         run: |
@@ -91,5 +91,5 @@ jobs:
 
       - name: Report success
         run: |
-          echo "✓ All Linux README instructions verified successfully!"
-          echo "✓ Students following the Linux instructions should have a working environment"
+          echo "[OK] All Linux README instructions verified successfully!"
+          echo "[OK] Students following the Linux instructions should have a working environment"

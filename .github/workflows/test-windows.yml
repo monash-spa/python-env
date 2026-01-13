@@ -41,7 +41,7 @@ jobs:
           Write-Host "Verifying repository download as per README Step 4..."
           Write-Host "Current directory: $(Get-Location)"
           Get-ChildItem
-          if ((Test-Path pyproject.toml) -and (Test-Path README.md)) { Write-Host "✓ Required files found" }
+          if ((Test-Path pyproject.toml) -and (Test-Path README.md)) { Write-Host "[OK] Required files found" }
 
       - name: Step 5 - Create and activate environment (from README)
         shell: powershell
@@ -91,5 +91,5 @@ jobs:
       - name: Report success
         shell: powershell
         run: |
-          Write-Host "✓ All Windows README instructions verified successfully!"
-          Write-Host "✓ Students following the Windows instructions should have a working environment"
+          Write-Host "[OK] All Windows README instructions verified successfully!"
+          Write-Host "[OK] Students following the Windows instructions should have a working environment"
