@@ -120,6 +120,8 @@ To start a Jupyter notebook:
 uv run jupyter notebook
 ```
 
+__You must be in the folder where you created the environment__ when using `uv run`. 
+
 ---
 
 ### Linux Setup Instructions
@@ -227,6 +229,9 @@ To start a Jupyter notebook:
 uv run jupyter notebook
 ```
 
+
+__You must be in the folder where you created the environment__ when using `uv run`. 
+
 ---
 
 ### Windows Setup Instructions
@@ -333,11 +338,14 @@ To start a Jupyter notebook:
 uv run jupyter notebook
 ```
 
+
+__You must be in the folder where you created the environment__ when using `uv run`. 
+
 ---
 
 ## Verifying Your Installation
 
-After completing the setup for your operating system, let's verify everything works correctly.
+After completing the setup for your operating system, let's verify everything works correctly. __You must be in the folder where you created the environment__ when using `uv run`. 
 
 ### Test Python import
 
@@ -388,6 +396,10 @@ To stop Jupyter, go back to your terminal/PowerShell and press `Ctrl+C`, then ty
    uv run jupyter notebook
    ```
 
+__You must be in the folder where you created the environment__ when using `uv run`. 
+
+If you want to move the environment to a different directory, you can copy the files (`.python_version`, `uv.lock`, and `pyproject.toml`) to another directory and repeat from the  `uv sync` step.
+
 You can also 'activate' the environment once and then use it in that same terminal/PowerShell without having to prefix `uv run`:
 
 ```bash
@@ -407,6 +419,12 @@ If you have a Python script (e.g., `my_analysis.py`), run it with:
 ```bash
 uv run python my_analysis.py
 ```
+
+### Using inside VSCode
+
+If you prefer to use Microsoft VSCode for notebooks, you must install the ![UV Toolkit extension](https://marketplace.visualstudio.com/items?itemName=the0807.uv-toolkit) to discover the `honours-env` environment for use.
+
+Your Workspace should also be set to the folder (or a parent of the folder) where the environment is located.
 
 ### Adding new packages
 
@@ -466,6 +484,10 @@ ls -la
 ### Slow installation
 
 **Solution:** Some packages (especially `corrfunc`) need to be compiled, which takes time. This is normal. Grab a coffee and wait for it to complete.
+
+### Slow imports in VSCode Jupyter notebooks (`.ipynb`)
+
+**Solution:** Reboot the Python kernel. If the kernel locks up, reboot VSCode.
 
 ### "ImportError" when running Python
 
