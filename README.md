@@ -120,6 +120,8 @@ To start a Jupyter notebook:
 uv run jupyter notebook
 ```
 
+__You must be in the folder where you created the environment__ when using `uv run`. 
+
 ---
 
 ### Linux Setup Instructions
@@ -227,6 +229,9 @@ To start a Jupyter notebook:
 uv run jupyter notebook
 ```
 
+
+__You must be in the folder where you created the environment__ when using `uv run`. 
+
 ---
 
 ### Windows Setup Instructions
@@ -333,11 +338,14 @@ To start a Jupyter notebook:
 uv run jupyter notebook
 ```
 
+
+__You must be in the folder where you created the environment__ when using `uv run`. 
+
 ---
 
 ## Verifying Your Installation
 
-After completing the setup for your operating system, let's verify everything works correctly.
+After completing the setup for your operating system, let's verify everything works correctly. __You must be in the folder where you created the environment__ when using `uv run`. 
 
 ### Test Python import
 
@@ -388,7 +396,7 @@ To stop Jupyter, go back to your terminal/PowerShell and press `Ctrl+C`, then ty
    uv run jupyter notebook
    ```
 
-__You must be in the folder relative to where you created the environment__ when using `uv run`. 
+__You must be in the folder where you created the environment__ when using `uv run`. 
 
 If you want to move the environment to a different directory, you can copy the files (`.python_version`, `uv.lock`, and `pyproject.toml`) to another directory and repeat from the  `uv sync` step.
 
